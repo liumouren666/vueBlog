@@ -44,7 +44,7 @@
 </template>
 
 <script>
-import { getList, getArticleById } from "../../../mock/index.js";
+// import { getList, getArticleById } from "../../../mock/index.js";
 // @ is an alias to /src
 export default {
   name: "Home",
@@ -52,15 +52,32 @@ export default {
     return { articleList: [] };
   },
   created() {
-    getList()
+    this.$http
+      .getList()
       .then((res) => {
         this.articleList = res.data;
-        console.log(this.articleList);
+        console.log(res);
       })
       .catch((err) => {
         alert(err);
       });
-    getArticleById("1231231")
+    // getList()
+    //   .then((res) => {
+    //     this.articleList = res.data;
+    //     console.log(this.articleList);
+    //   })
+    //   .catch((err) => {
+    //     alert(err);
+    //   });
+    // getArticleById("1231231")
+    //   .then((res) => {
+    //     console.log("res", res);
+    //   })
+    //   .catch((err) => {
+    //     alert(err);
+    //   });
+    this.$http
+      .getArticleById("1231231")
       .then((res) => {
         console.log("res", res);
       })
@@ -76,7 +93,7 @@ export default {
   display: flex;
   background: #555;
   height: 100%;
-  flex:1
+  flex: 1;
 }
 .box-column {
   width: 300px;
