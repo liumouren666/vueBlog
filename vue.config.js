@@ -66,13 +66,13 @@ module.exports = {
       warnings: false,
       errors: true
     },
-    // proxy: {
-    //   // http://chanwingwah.info/api/api/blog/list  目标地址
-    //   [process.env.VUE_APP_BASE_API]: {
-    //     target: 'http://chanwingwah.info/', // 本地代理地址
-    //     changeOrigin: true // 支持跨域
-    //   }
-    // }
+    proxy: {
+      // http://chanwingwah.info/api/api/blog/list  目标地址
+      [process.env.VUE_APP_BASE_API]: {
+        target: 'http://chanwingwah.info/', // 本地代理地址
+        changeOrigin: true // 支持跨域
+      }
+    }
   }
 }
 

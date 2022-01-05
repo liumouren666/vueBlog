@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 const Layout = () => import('../components/layout/index.vue')
 const Personal = () => import('../components/content/personal.vue')
 const Mybook = () => import('../components/content/mybook.vue')
+const Login = ()=>import('../components/login/index.vue')
 Vue.use(VueRouter)
 const routes = [
   {
@@ -20,6 +21,9 @@ const routes = [
         component: Mybook
       },
     ]
+  },
+  {
+    path: '/login', component: Login,
   }
 
 

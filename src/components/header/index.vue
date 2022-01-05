@@ -15,6 +15,7 @@ export default {
     ...mapMutations("login", ["outLogin"]),
     outLog() {
       this.outLogin();
+      this.$router.push('/login')
     },
   },
 };

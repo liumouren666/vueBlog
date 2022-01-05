@@ -43,6 +43,7 @@ export default {
          password:this.password,
          account:this.account
        })
+       this.$router.push('/')
     },
   },
 };

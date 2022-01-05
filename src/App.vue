@@ -14,11 +14,19 @@ export default {
   components: {
     Login,
   },
+  data() {
+    return {
+      // isLogin:false
+    };
+  },
+  mounted() {
+    // this.isLogin = localStorage.getItem("login");
+  },
   computed: {
     ...mapState("login", ["loginStaus"]),
-    isLogin() {
-      return this.loginStaus;
-    },
+    isLogin(){
+      return localStorage.getItem("login");
+    }
   },
 };
 </script>

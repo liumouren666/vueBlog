@@ -76,14 +76,14 @@ export default {
     //   .catch((err) => {
     //     alert(err);
     //   });
-    this.$http
-      .getArticleById("1231231")
-      .then((res) => {
-        console.log("res", res);
-      })
-      .catch((err) => {
-        alert(err);
-      });
+    // this.$http
+    //   .getArticleById("1231231")
+    //   .then((res) => {
+    //     console.log("res", res);
+    //   })
+    //   .catch((err) => {
+    //     alert(err);
+    //   });
   },
 };
 </script>
